@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class GameobjectInfo : MonoBehaviour
 {
-    //保存位置信息（区域+下标），进行空间上的移动（三维坐标）
+    //保存位置信息（区域+下标）
     public int Area { set; get; }
     public int Index { set; get; }
-
+    //是否可以点击
     public bool clickable { set; get; } = true;
-    public void UpdatePosition(int a, int b,bool movenow)
+    public void UpdatePosition(int a, int b,bool movenow)//初始化时设置movenow为true，立即移动到指定位置。游戏运行时设置为false，由动作管理器执行动作
     {
         Area = a;
         Index = b;

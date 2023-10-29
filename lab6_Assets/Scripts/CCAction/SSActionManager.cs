@@ -9,7 +9,7 @@ public class SSActionManager : MonoBehaviour {
 	private List<int> waitingDelete = new List<int> ();
 
 	// Update is called once per frame
-	protected void Update () {
+	protected void Update () {//将waitingAdd中所有动作加入actions,执行所有actions中的动作,从actions移除所有waitingDelete中的动作
 		foreach (SSAction ac in waitingAdd) actions [ac.GetInstanceID ()] = ac;
 		waitingAdd.Clear ();
 
